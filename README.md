@@ -45,7 +45,7 @@ simple_example = SimpleExample(debug=True)
 
 async def do_something_paralel():
     while True:
-        # In parallel, we send a message to remote, called answer_hi
+        # In parallel, we send a message to remote, called ping
         simple_example.send_remote('ping')
         # We need to sleep for waking up eventloop (I don't know why asyncio do this)
         await asyncio.sleep(0.00001)
