@@ -28,9 +28,6 @@ This simple ping-pong example above shows how the **MainProcess** communicate wi
 import asyncio
 from pypipeclass.classes import SyncedProcess
 
-import asyncio
-from pypipeclass.classes import SyncedProcess
-
 
 class SimpleExample(SyncedProcess):
     # This is commands that remote will receive.
