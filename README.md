@@ -4,13 +4,13 @@ An async multiprocessing Python class with easy communication using pipes
 
 ![Imagem exemplo](https://i.imgur.com/7iqWbTe.png)
 
-### RoadMap
+## RoadMap
 
 - [x] Create base class
 - [ ] Create decorators **@command** and **@job** for class functions
 - [ ] Add more ideas of implementation
 
-### Explanation
+## Explanation
 
 With this class we can have a lot of proccess communication with the main without needing of writing pipes or queues, that solve a lot of problems with async processes.
 
@@ -20,7 +20,7 @@ With this class we can have a lot of proccess communication with the main withou
 
 In our `example.py` we have a class named **SomeClass**, when we apply to a variable `test = SomeClass()` we have one instance of `test` on the **Main Process**. After we call `test.start()`, another process named `SomeClass-1` is created, and has another instance of `test` on it, wich comunicates with `test` on **Main Process** using **pipes**.
 
-### Usage
+## Usage
 
 This simple ping-pong example above shows how the **MainProcess** communicate with **SimpleExample-1** wich is created when we call `simple_example.start()` method. As `start()` a asynchronous infinite looping method, we need to run in paralel with something else for avoiding blocking the **MainProcess**.
 
@@ -61,6 +61,6 @@ if __name__ == '__main__':
     asyncio.run(local_main())
 ```
 
-### Extras
+## Extras
 
 Both remote and local commands can be functions and you can also have jobs running on both sides, see **complex_example.py** for more info.
